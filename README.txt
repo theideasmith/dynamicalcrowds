@@ -57,3 +57,5 @@ I===@@@===@@@===@@@===@@@I
   passageway lengths, etc. which could factor into his decision making.
   This approach would only produce meaningful benefits when the distributions
   are irregular, and hence not random.
+- Gordon Lab has done extensive work in this area: https://web.stanford.edu/~dmgordon/publications.html
+   
