@@ -1,7 +1,7 @@
 import numpy as np
 
-board_w = 4
-board_h = 4
+board_h = 40
+board_w = 5
 EMPTY = 0
 AGENT = 1
 WALL  = 2
