@@ -1,8 +1,7 @@
 # Description
 
-I observed a complex phenomenon as I
-entered the escalator down to the trains
-today in Penn Station.
+I observed a complex phenomenon as I entered 
+the escalator down to the trains today in Penn Station.
 There was a large mass of people all congregated
 by the entrance, pushing forward, trying to enter
 the escalator doors. The problem is that the esacaltor
@@ -51,7 +50,7 @@ I===@@@===@@@===@@@===@@@I
 I         Notes          I
 I===@@@===@@@===@@@===@@@I
 - Last year I was wondering how mazes could be characterized.
-  Now I have the poser of statistics on my side and can deploy it
+  Now I have the power of statistics on my side and can deploy it
   anywhere data needs to be understood. The robot can
   learn the distribution of passageway direction switching,
   passageway lengths, etc. which could factor into his decision making.
