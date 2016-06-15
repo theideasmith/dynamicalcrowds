@@ -11,7 +11,7 @@ def animate():
     f = figure()
     ax = f.add_subplot(111)      
     board = np.array(sample_image).astype(np.int)
-    print board
+    board_h, board_w = board.shape
     #board = np.ones((board_h, board_w))*EMPTY
 
    # board[0,1:4] = GOAL
@@ -23,7 +23,9 @@ def animate():
     states = []
     exited_agents=0
     while exited_agents < agents:
-      board = add_agents(np.array(board))
+      print np.sum(board==AGENT)
+      #board = add_agents(np.array(board))
+      newboard = add_agents(np.array(board))
       for i in xrange(board_h):
         for j in xrange(board_w):
           if board[i,j] != AGENT:
@@ -32,22 +34,20 @@ def animate():
           if newpos is None:
             continue
           x,y = newpos
-          if board[x,y] != GOAL:
-              board[x,y] = AGENT
-          else:
-              exited_agents+=1
-          board[i,j] = EMPTY
-          states.append( board )
+          if board[x,y] == GOAL:
+            newboard[i,j] = EMPTY
+            exited_agents+=1
+          else :
+            newboard[x,y] = AGENT
+            newboard[i,j] = EMPTY
+          states.append( newboard )
 
-        #   imageio.imwrite('./images/{0}.jpeg'.format(t), drawable)
-        # ax.imshow(drawable)
-        #ax.set_yticks([])
-        #ax.set_xticks([])
-        #f.savefig('./matimages/{0}.jpeg'.format(t))
-        t+=1
-      drawable = imresize(board, size=10000)
+      drawable = imresize(newboard, size=1000)
+      drawable = np.flipud(drawable)
       cv2.imshow('Board', drawable)
-      cv2.waitKey(100)
-      
+      cv2.waitKey(1)
+          #imageio.imwrite('./test2/{0}.jpeg'.format(t), drawable)
+        
+      board = newboard
 
 animate()

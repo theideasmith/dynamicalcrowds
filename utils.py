@@ -71,8 +71,8 @@ def agentStep(board, pos):
         lambda xy: (board[xy[0],xy[1]] in [EMPTY, GOAL]),
         positions
   )
-  print len(positions)
-  if len(positions) ==0: return None
+  if len(positions) == 0: return None
+
   # print '-----'
   # print positions
   # print board
@@ -84,8 +84,17 @@ def agentStep(board, pos):
   distances = map(
     lambda xy: np.sqrt(np.sum(np.subtract(xy,goal)**2)),
     positions)
-  minimum = np.argmin(distances)
-  destination = positions[minimum]
+  minimum = np.argmin(distances)   
+  destination = positions[minimum] 
+
+  if False: # if len(positions)==1: 
+    print 'One Option--'
+    print pos
+    print positions
+    print distances
+    print minimum
+    print destination
+    print board[destination[0], destination[1]]
 
   if board[destination] == goal:
       return None
