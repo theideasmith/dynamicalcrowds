@@ -13,7 +13,7 @@ like for each starting location? What is the optimal
 starting location.
 
 We"ll start the simulation as a cellular automaton
-and then build from there
+and then build from there.
 
 -----
 
@@ -34,7 +34,7 @@ P_t is the environment matrix for each agent at timestep t,
 depicting environment cell inhabitances around the agent's
 own cell.
 
-Now we are assuming there is only one limit attractor,
+Now we are assuming there is only one attractor,
 so the agent moves to the P_ij closest to DESTINATION.
 
 Which metrics to analyze for?

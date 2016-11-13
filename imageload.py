@@ -22,6 +22,5 @@ def load_image(location, rgb_map = rgb_to_board_map):
   board = map_RGB(image, rgb_map)
   return board
 
-sample_image = load_image('./test2.png')
 
 
